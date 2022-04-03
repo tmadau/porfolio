@@ -1,0 +1,19 @@
+body {
+    color: white;
+    background-color: #1d4355;
+}
+
+#section1 {
+    background-color: #365b6d;
+    border-left: 3px solid #d9d9d9;
+}
+
+#section2 {
+    background-color: #4f7486;
+    border-left: 3px solid #d9d9d9;
+}
+
+#section3 {
+    background-color: #1d4355;
+    border-left: 3px solid #d9d9d9;
+}
