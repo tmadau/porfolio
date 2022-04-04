@@ -1,19 +1,256 @@
-body {
+/* * {
+    box-sizing: border-box;
+} */
+
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li, hr,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section,
+summary, hgroup {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.content {
     color: white;
     background-color: #1d4355;
 }
 
+ /*
+ 
+ Started adding here
+ 
+ */
+ 
+a:active, a:hover {
+   outline: 0;
+}
+ 
+ 
+ /* ------------------------------------------
+   RESPONSIVE NAV STYLES
+ --------------------------------------------- */
+
+ /* start */
+ @media only screen and (max-width:768px){  
+    *{  
+      overflow:hidden;  
+     }  
+    .nav-sub{  
+      position:absolute;   
+      top:10vh;  
+      right:0px;  
+      flex-direction:column;  
+      background-color:rgb(0,0,0,0.75);  
+      border-radius:0px 0px 0px 20px;  
+      transition:transform 0.3s ease-in;  
+      transform:translate(100%);  
+     }  
+    .nav-change{  
+      transform:translate(0%);  
+     }  
+    .ham{  
+      display:block;  
+     }  
+    .change .bar1 {  
+     transform: rotate(45deg) translate(8px,3px);  
+    }  
+    .change .bar2 {  
+     opacity: 0;  
+    }  
+    .change .bar3 {  
+     transform: rotate(-45deg) translate(8px,-3px);  
+    }  
+    }  
+
+    /* end */
+ 
+ 
+ /* ------------------------------------------
+   FIXED HEADER
+ --------------------------------------------- */
+ 
+ header {
+   position: fixed;
+   z-index: 3;
+   width: 100%;
+   left: 0;
+   top: 0;
+ }
+ 
+ .logo {
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+   text-decoration: none;
+   font-weight: bold;
+   line-height: 55px;
+   padding: 0;
+   color: #000;
+   float: left;
+ }
+ 
+ /* ------------------------------------------
+   NAVIGATION STYLES
+ --------------------------------------------- */
+ 
+ 
+ .nav-collapse,
+ .nav-collapse ul {
+   list-style: none;
+   width: 100%;
+   float: left;
+ }
+ 
+ @media screen and (min-width: 768px) {
+   .nav-collapse {
+     float: right;
+     width: auto;
+   }
+ }
+ 
+ .nav-collapse li {
+   float: left;
+   width: 100%;
+ }
+ 
+ @media screen and (min-width: 768px) {
+   .nav-collapse li {
+     width: auto;
+   }
+ }
+ 
+ .nav-collapse a {
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+   text-decoration: none;
+   padding: 0.7em 1em 0.7em 0;
+   color: #000;
+   width: 100%;
+   float: left;
+ }
+ 
+ .nav-collapse a:active,
+ .nav-collapse .active a {
+   text-decoration: underline;
+ }
+ 
+ @media screen and (min-width: 768px) {
+   .nav-collapse a {
+     padding: 1.02em 2em;
+     text-align: center;
+     border-top: 0;
+     float: left;
+     margin: 0;
+   }
+   
+   .nav-collapse:last-child a {
+     padding-right: 0;
+   }
+ }
+ 
+ /* Demo style */
+ 
+ body {
+   font-family: 'Open Sans', sans-serif;
+   background: #eee;
+ }
+ 
+ /* img {
+   max-width: 100%;
+   padding: 0 0 20px 0; 
+ } */
+ 
+ h2 {
+   padding-bottom: 20px;
+ }
+ 
+ header {
+   background: #FFF;
+   opacity: 0.8;
+ }
+ 
+ .container {
+   max-width: 800px;
+   margin: 0 auto;
+   padding-left: 15px;
+   padding-right: 15px;
+ }
+ 
+ .container-bottom {
+   margin-top: 80px;
+ }
+ 
+ section {
+   padding-bottom: 30px;
+ }
+ 
+ section p {
+   padding-bottom: 20px;
+ }
+
+/*
+
+Ended adding
+
+*/
+
+.hero {
+    height:550px;
+    background-image: url('assets/TK.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .overlay {
+    background-color: #1d4355;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0.5;
+}
+
+.hero .content {
+    color: #fff;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero .content h1 {
+    font-size: 45px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero .content p{
+    font-family: 'Montserrat', sans-serif;
+}
+  
+
 #section1 {
     background-color: #365b6d;
-    border-left: 3px solid #d9d9d9;
+    border-bottom: 3px solid #d9d9d9;
+    animation-name: section1;
+    animation-duration: 1s;
+
 }
 
 #section2 {
     background-color: #4f7486;
     border-left: 3px solid #d9d9d9;
+    border-bottom: 3px solid #d9d9d9;
 }
 
 #section3 {
     background-color: #1d4355;
     border-left: 3px solid #d9d9d9;
+    border-bottom: 3px solid #d9d9d9;
 }
